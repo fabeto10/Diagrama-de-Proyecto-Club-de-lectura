@@ -52,8 +52,6 @@ class Home(Base):
     user = relationship("user", back_populates="children")
     user_id = Column(Integer, ForeignKey("user.id"))
     user_name=Column(String(250), nullable=False)
-    email=Column(String(250), nullable=False)
-    password=Column(String(250), nullable=False)
 
 class Media(Base):
     __tablename__ = 'media'
